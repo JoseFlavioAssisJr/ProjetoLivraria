@@ -154,7 +154,9 @@ public class FormLogin extends javax.swing.JFrame {
             if(user.validarSenha(senha))
         {
                 if(user.efetuarlogin(matricula, senha)){
-                lbMensagem.setText("Login efetuado com sucesso");
+                //lbMensagem.setText("Login efetuado com sucesso");
+                new FormPrincipal().setVisible(true);
+                this.dispose();
             }
                 else
             {

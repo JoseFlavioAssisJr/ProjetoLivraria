@@ -12,7 +12,7 @@ package forms;
 public class FormPrincipal extends javax.swing.JFrame {
 
     /**
-     * Creates new form NovoJFrame
+     * Creates new form FormCliente
      */
     public FormPrincipal() {
         initComponents();
@@ -65,8 +65,18 @@ public class FormPrincipal extends javax.swing.JFrame {
         jPanel1.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         JMenuCadastro.setText("Cadastros");
+        JMenuCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JMenuCadastroActionPerformed(evt);
+            }
+        });
 
         jMenuItemCadCliente.setText("Clientes");
+        jMenuItemCadCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadClienteActionPerformed(evt);
+            }
+        });
         JMenuCadastro.add(jMenuItemCadCliente);
 
         jMenuItemCadProdutos.setText("Produtos");
@@ -74,6 +84,11 @@ public class FormPrincipal extends javax.swing.JFrame {
         JMenuCadastro.add(jSeparator1);
 
         jMenuItemSair.setText("Sair");
+        jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSairActionPerformed(evt);
+            }
+        });
         JMenuCadastro.add(jMenuItemSair);
 
         jMenuBar1.add(JMenuCadastro);
@@ -146,6 +161,19 @@ public class FormPrincipal extends javax.swing.JFrame {
     private void jMenuItemConsulClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsulClientesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemConsulClientesActionPerformed
+
+    private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemSairActionPerformed
+
+    private void JMenuCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMenuCadastroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JMenuCadastroActionPerformed
+
+    private void jMenuItemCadClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadClienteActionPerformed
+        new FormCliente().setVisible(true);
+    }//GEN-LAST:event_jMenuItemCadClienteActionPerformed
 
     /**
      * @param args the command line arguments
